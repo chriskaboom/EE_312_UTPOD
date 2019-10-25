@@ -5,6 +5,7 @@
 #include <string>
 #include <iostream>
 
+using namespace std;
 
 class Song{ 
 
@@ -25,10 +26,17 @@ class Song{
         void setSongName(string q); 
 
         int getSize(); 
-        void setSize(int p); 
+        void setSize(int p);
+        void swap(Song &song);
+        bool operator >(Song const &rhs);
+        bool operator ==(Song const &rhs);
 
-        ~Song(); 
-}; 
+
+
+    ~Song();
+};
+
+ostream& operator << (ostream& out, Song &s);
 
 #endif
 
